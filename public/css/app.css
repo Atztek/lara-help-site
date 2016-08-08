@@ -1,0 +1,12 @@
+
+.cal-cell{
+	width: 14.285714285714285%;
+	display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 0%;
+    border: 1px solid #e1e1e1;
+    padding: 10px 10px 40px;
+}
