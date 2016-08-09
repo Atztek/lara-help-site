@@ -35,7 +35,13 @@ class Month
 		$count = 0;
 		while ($iteration->timestamp < $this->end_day->timestamp) {
 			$count++;
-			$week[] = array('day'=>$iteration->day);
+			$week_item = array('day'=>$iteration->day,"class"=>"");
+			
+			if ($iteration->month != $this->month->month) {
+				$week_item['class'].=" gray";
+			}
+
+			$week[] = $week_item;
 			//echo $iteration."<br>";
 			$iteration->addDay();
 			if($count%7===0){
