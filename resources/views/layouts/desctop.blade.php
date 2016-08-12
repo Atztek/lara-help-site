@@ -16,6 +16,9 @@
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="/js/angular/app.js"></script>
 
 </head>
 <body>

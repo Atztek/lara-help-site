@@ -19,7 +19,7 @@ class Main extends Controller
     public function index(Request $request)
 	{
 
-		$month = new Calendar\Month(Carbon::now());
+		$month = new Calendar\Month(Carbon::createFromFormat("m-Y","1-2017"));
 		//echo "<br>--------------<br>";
 		//$month = new Calendar\Month(Carbon::now()->addMonth());
 
@@ -38,5 +38,14 @@ class Main extends Controller
 		return view('desctop.index',[
 			'month'=>$month->getDays()
 		]);
+	}
+
+	public function getMonth(Request $request,$month){
+		$days = new Calendar\Month(Carbon::createFromFormat("m-Y",$month) );
+
+		return response()->json(array(
+            'success' => true,
+            'weeks'   => $days->getDays()
+        ));
 	}
 }

@@ -12,6 +12,8 @@
 */
 Route::get('/', 'Desctop\Main@index');
 
+Route::get('/ajax/month/{month}', 'Desctop\Main@getMonth');
+
 
 
 Route::auth();
