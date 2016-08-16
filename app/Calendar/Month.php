@@ -36,7 +36,7 @@ class Month
 		while ($iteration->timestamp < $this->end_day->timestamp) {
 			$count++;
 			$week_item = array('day'=>$iteration->day,"class"=>"");
-			
+
 			if ($iteration->month != $this->month->month) {
 				$week_item['class'].=" gray";
 			}
@@ -53,6 +53,18 @@ class Month
 
 	public function getDays(){
 		return $this->weeks;
+	}
+
+	public function getMonthText(){
+		return $this->month->formatLocalized('%B');
+	}	
+	
+	public function getYearhText(){
+		return $this->month->formatLocalized('%Y');
+	}
+
+	public function render(){
+		
 	}
 
 

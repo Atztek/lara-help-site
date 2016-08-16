@@ -45,7 +45,9 @@ class Main extends Controller
 
 		return response()->json(array(
             'success' => true,
-            'weeks'   => $days->getDays()
+            'weeks'   => $days->getDays(),
+            'month_text'   => $days->getMonthText(),
+            'year'   => $days->getYearhText()
         ));
 	}
 }

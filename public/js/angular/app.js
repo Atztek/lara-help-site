@@ -9,6 +9,8 @@ Calendar.controller('DaysController', function DaysController($scope,$http) {
   $scope.getWeeks = function(){
     $http.get('/ajax/month/'+($scope.date.getMonth()+1)+"-"+$scope.date.getFullYear() ).success(function(data) {
       $scope.weeks = data.weeks;
+      $scope.month_text = data.month_text;
+      $scope.year = data.year;
     });
   }
 
@@ -16,6 +18,11 @@ Calendar.controller('DaysController', function DaysController($scope,$http) {
 
   $scope.nextMonth = function(){
     $scope.date.setMonth($scope.date.getMonth() + 1);
+    $scope.getWeeks();
+  }  
+
+  $scope.prevMonth = function(){
+    $scope.date.setMonth($scope.date.getMonth() - 1);
     $scope.getWeeks();
   }
 
