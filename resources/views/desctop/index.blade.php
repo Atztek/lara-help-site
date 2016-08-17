@@ -6,11 +6,14 @@
 <div class="row">
 
 	<div class="col-md-3">
+		<a href="#" class="btn btn-primary">
+			@lang('invoice.add_invoice')
+		</a>
 		<ul class="list-group">
 			<li class="list-group-item">
-		    		<span class="badge">14</span>
+		    	<span class="badge">14</span>
 		    			Cras justo odio
-		  		</li>
+		  	</li>
 		</ul>
 	</div>
 	
@@ -31,8 +34,8 @@
 					</div>
 				</div>
 				<div class="row headings">
-					<div class="cal-cell">Пон</div>
-					<div class="cal-cell">Втор</div>
+					<div class="cal-cell">Понедельник</div>
+					<div class="cal-cell">Вторник</div>
 					<div class="cal-cell">Среда</div>
 					<div class="cal-cell">Четверг</div>
 					<div class="cal-cell">Пятница</div>
@@ -44,8 +47,8 @@
 						<div ng-repeat="day in week" class="cal-cell @{{ day.class }}" >@{{ day.day }}</div>
 					</div>
 					<div>
-						<button class="btn btn-primary" ng-click="prevMonth()">prev_month</button>
-						<button class="btn btn-primary" ng-click="nextMonth()">next_month</button>
+						<button class="btn btn-primary" ng-click="prevMonth()">@lang('calendar.prev_month')</button>
+						<button class="btn btn-primary" ng-click="nextMonth()">@lang('calendar.next_month')</button>
 					</div>
 				</div>
 			</div>
