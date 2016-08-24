@@ -1,0 +1,22 @@
+{
+  "name": "helpsite",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Ivan Karachencev <karachencew@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Atztek/lara-help-site",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "^2.1.2",
+    "angular": "^1.5.8"
+  }
+}
