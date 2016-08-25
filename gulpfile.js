@@ -1,3 +1,4 @@
+/*
 var elixir = require('laravel-elixir');
 
 /*
@@ -10,7 +11,19 @@ var elixir = require('laravel-elixir');
  | file for our application, as well as publishing vendor resources.
  |
  */
-
+/*
 elixir(function(mix) {
     mix.sass('app.scss');
 });
+*/
+var gulp = require('gulp');
+
+var mainBowerFiles = require('main-bower-files');
+ 
+gulp.task('bower', function() {
+	console.log(mainBowerFiles());
+    return gulp.src(mainBowerFiles())
+        .pipe(gulp.dest('public/bower-compile/'))
+});
+
+gulp.task('default', ['bower']);

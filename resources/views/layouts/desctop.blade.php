@@ -15,11 +15,16 @@
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/app.css" rel="stylesheet">
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-	<script src="/js/angular/app.js"></script>
 
+    <link href="/css/app.css" rel="stylesheet">
+    
+    
+    {{ App\Helper\Assets::getJs() }}
+
+    <script src="/js/angular/app.js"></script>
+    
+
+    {{ App\Helper\Assets::getCss() }}
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-static-top">
@@ -71,5 +76,6 @@
 	<div class="container">
 		@yield('content')
 	</div>
+
 </body>
 </html>

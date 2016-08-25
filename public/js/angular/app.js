@@ -1,5 +1,5 @@
 // Define the `phonecatApp` module
-var Calendar = angular.module('Calendar', []);
+var Calendar = angular.module('Calendar', ['ui.bootstrap']);
 
 // Define the `PhoneListController` controller on the `phonecatApp` module
 Calendar.controller('DaysController', function DaysController($scope,$http) {
