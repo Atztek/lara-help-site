@@ -35,6 +35,11 @@ Calendar.controller('DaysController', function DaysController($scope,$http) {
       })
   };
   */
-
   
+});
+
+Calendar.controller('MenyController', function MenyController($scope,$http) {
+  $scope.addInvoiceDialog = function(){
+    console.log(1);
+  }
 });

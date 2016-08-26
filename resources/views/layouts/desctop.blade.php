@@ -9,22 +9,19 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
 	
 	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
 	<script src="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
-
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="/css/app.css" rel="stylesheet">
-    
     
     {{ App\Helper\Assets::getJs() }}
 
     <script src="/js/angular/app.js"></script>
-    
 
     {{ App\Helper\Assets::getCss() }}
+   
+    <link href="/css/app.css" rel="stylesheet">
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-static-top">

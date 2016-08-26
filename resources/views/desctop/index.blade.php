@@ -3,23 +3,18 @@
 @section('content')
 
 
-<div class="row">
+<div class="row" ng-app="Calendar">
 
-	<div class="col-md-3">
-		<a href="#" class="btn btn-primary">
+	<div class="col-md-3" ng-controller='MenyController'>
+		<button class="btn btn-primary" ng-click='addInvoiceDialog()'>
 			@lang('invoice.add_invoice')
-		</a>
-		<ul class="list-group">
-			<li class="list-group-item">
-		    	<span class="badge">14</span>
-		    			Cras justo odio
-		  	</li>
-		</ul>
+		</button>
+		@{{ invoice }}
 	</div>
 
 	<div class="col-md-9 ">
 
-		<div ng-app="Calendar" class="month" >
+		<div  class="month" >
 			<div ng-controller="DaysController">
 				<div class="row">
 					<div class="col-xs-6 text-right lead">
@@ -50,27 +45,6 @@
 			</div>
 		</div>
 		
-		{{--
-		<div class="month">
-			<div class="row headings">
-				<div class="cal-cell">Пон</div>
-				<div class="cal-cell">Втор</div>
-				<div class="cal-cell">Среда</div>
-				<div class="cal-cell">Четверг</div>
-				<div class="cal-cell">Пятница</div>
-				<div class="cal-cell">Суббота</div>
-				<div class="cal-cell">Воскресенье</div>
-			</div>
-			@foreach($month as $week)
-			<div class="row weeks">
-				@foreach($week as $day)
-					<div class="cal-cell {{ $day['class'] }}" >{{ $day['day'] }}</div>
-				@endforeach
-				
-			</div>
-			@endforeach
-		</div>
-		--}}
 	</div>
 </div>
 
